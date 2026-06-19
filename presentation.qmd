@@ -144,4 +144,99 @@ $$
 2. Replace `[img-placeholder]` with your own image path once.
 3. Duplicate and adapt layouts to build your final deck quickly.
 
+## Python Code — Incremental Highlighting
+
+```{python}
+#| echo: true
+#| code-line-numbers: "|1-2|4-7|9-12"
+import numpy as np
+from itertools import accumulate
+
+# Build a Fibonacci growth sequence
+seed = [1, 1]
+fib = seed + [0] * 8
+for i in range(2, 10):
+    fib[i] = fib[i - 1] + fib[i - 2]
+
+# Golden-ratio convergence
+ratios = [fib[i + 1] / fib[i] for i in range(len(fib) - 1)]
+print("Sequence:", fib)
+print("Ratios  :", [f"{r:.4f}" for r in ratios])
+print(f"φ ≈ {ratios[-1]:.6f}")
+```
+
+## Python Plot — Code & Output Side by Side
+
+```{python}
+#| echo: true
+#| output-location: column-fragment
+#| fig-format: svg
+#| fig-width: 5.5
+#| fig-height: 4.5
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 4 * np.pi, 300)
+fig, ax = plt.subplots(figsize=(5.5, 4.5),
+                       facecolor='white')
+ax.set_facecolor('#fafafa')
+
+palette = ['#c81818', '#101073', '#00a2de']  # TU/e Scarlet, Deep Blue, Cyan
+for a, c in zip([0.15, 0.4, 0.9], palette):
+    y = np.sin(x) * np.exp(-a * x / (4 * np.pi))
+    ax.plot(x, y, lw=2.4, color=c, label=f'α = {a}')
+
+ax.fill_between(x, -0.3, 0.3,
+                alpha=0.06, color='grey')
+ax.set(xlabel='Phase (rad)',
+       ylabel='Amplitude',
+       title='Damped Oscillations')
+ax.legend(frameon=True, fontsize=11)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.grid(True, alpha=0.25)
+fig.tight_layout()
+plt.show()
+```
+
+## Absolute Positioning — Drag-and-Drop Style
+
+![](assets/application-x-addon-symbolic.svg){.absolute top=80 left=60 width="70"}
+
+![](assets/application-x-addon-symbolic.svg){.absolute top=60 right=120 width="55"}
+
+![](assets/application-x-addon-symbolic.svg){.absolute bottom=180 left=700 width="90"}
+
+![](assets/application-x-addon-symbolic.svg){.absolute top=350 left=1200 width="50"}
+
+::: {.absolute .tue-box-key top=120 left=200}
+**Key Finding** — Agglomeration rates scale with the particle Reynolds number.
+:::
+
+::: {.absolute .tue-box-secondary top=350 left=80}
+Secondary note placed freely on the canvas, just like a PowerPoint text box.
+:::
+
+::: {.absolute .tue-box-callout top=260 right=160}
+Callout box — positioned wherever you need it on the slide.
+:::
+
+## Morph Demo — Square {auto-animate=true}
+
+::: {.tue-morphbox .tue-morphbox--scarlet data-id="morphbox" style="width:220px;height:220px;"}
+Step 1
+:::
+
+## Morph Demo — Pill {auto-animate=true}
+
+::: {.tue-morphbox .tue-morphbox--pill .tue-morphbox--deep-blue data-id="morphbox" style="width:600px;height:120px;margin:140px auto;"}
+Step 2 — wider
+:::
+
+## Morph Demo — Circle {auto-animate=true}
+
+::: {.tue-morphbox .tue-morphbox--circle .tue-morphbox--green data-id="morphbox" style="width:320px;height:320px;margin:60px auto;"}
+Step 3 — round
+:::
+
 [img-placeholder]: assets/rightpic.jpg
