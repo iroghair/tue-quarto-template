@@ -1,0 +1,59 @@
+---
+title: "Metal Fuels Agglomeration"
+subtitle: "Agglomeration dynamics and diagnostics"
+author: "Ivo Roghair"
+date: "18 June 2026"
+format: tue-revealjs
+tue-cover-image: assets/tue-bg-img1.jpg
+tue-cover-logo: assets/tue-logo-white.png
+# Red bar opacity (0 = fully transparent, 1 = fully opaque)
+tue-cover-bar-opacity: 0.65
+# Slide background colour — used for normal slides and the bottom footer strip of the cover slide
+tue-slide-bg: "#f3efef" 
+# Content slide text padding (top/bottom left/right), e.g. "30px 58px"
+tue-content-slide-padding: "30px 58px"
+# Short title shown on the left of the footer bar on every content slide
+tue-short-title: "Ivo Roghair — Agglomeration in Metal Fuels Reduction"
+# Logo shown on the right of the footer bar (defaults to TU/e scarlet logo)
+tue-footer-logo: "assets/tue-logo-wide-scarlet-alpha.png"
+---
+
+## Motivation
+
+Metal fuel particles can agglomerate under high-temperature conditions, which changes the effective surface area, reaction rate, and transport behavior.
+
+- This starter project uses a widescreen Reveal.js deck.
+- The TU/e-inspired cover slide is generated automatically from the document metadata.
+- Replace the cover image path or logo path in the front matter when you want a different opening slide.
+
+## Example Analysis
+
+:::: columns
+::: {.column width="58%"}
+### Key points
+
+- Agglomeration changes the particle size distribution.
+- Optical diagnostics and post-processing can be summarized on one slide.
+- Equations render with standard LaTeX math support.
+
+$$
+\tau = \frac{d_p^2}{18 \nu}
+$$
+:::
+
+::: {.column width="42%"}
+![](assets/rightpic.jpg){fig-alt="Sample image" width=80%}
+:::
+::::
+
+## Roadmap
+
+1. Experimental setup
+2. Image-based agglomerate metrics
+3. Model comparison and sensitivity
+
+## Next Steps
+
+1. Replace the title, subtitle, author, and date in the front matter.
+2. Swap `tue-cover-image` for your own high-resolution title visual when needed.
+3. Add new slides with `##` headings and standard Quarto Markdown.

@@ -1,0 +1,6 @@
+project:
+  type: default
+  output-dir: _output
+  resources:
+    # user-specific assets that are not bundled by the TU/e extension
+    - assets/tue-logo-wide-scarlet-alpha.png

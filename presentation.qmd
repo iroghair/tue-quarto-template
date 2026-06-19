@@ -1,0 +1,147 @@
+---
+title: "TU/e Quarto Presentation Theme"
+subtitle: "Reusable slide layout showcase"
+author: "Ivo Roghair"
+date: "18 June 2026"
+format: tue-revealjs
+tue-cover-image: assets/tue-bg-img1.jpg
+tue-cover-logo: assets/tue-logo-white.png
+# Red bar opacity (0 = fully transparent, 1 = fully opaque)
+tue-cover-bar-opacity: 0.65
+# Slide background colour — used for normal slides and the bottom footer strip of the cover slide
+tue-slide-bg: "#f3efef" 
+# Content slide text padding (top/bottom left/right), e.g. "30px 58px"
+tue-content-slide-padding: "30px 58px"
+# Short title shown on the left of the footer bar on every content slide
+tue-short-title: "Ivo Roghair — TU/e Quarto Theme"
+# Logo shown on the right of the footer bar (defaults to TU/e scarlet logo)
+tue-footer-logo: "assets/tue-logo-wide-scarlet-alpha.png"
+---
+
+## Single Column Itemize
+
+- Use this for agenda, framing, or key takeaways.
+- Keep each bullet to one message.
+- Use `**bold**` for emphasis and `==highlight==` for scanability.
+- Replace all placeholder images at once by editing one line at the bottom:
+	`[img-placeholder]: assets/rightpic.jpg`
+
+$$
+f(x) = \sum_{k=1}^{n} w_k\,\phi_k(x)
+$$
+
+## Two Columns Itemize
+
+:::: columns
+::: {.column width="50%"}
+### Left Stream
+
+- Problem context
+- Constraints
+- Required outcome
+:::
+
+::: {.column width="50%"}
+### Right Stream
+
+- Candidate approach
+- Risks
+- Validation plan
+:::
+::::
+
+## Single Image
+
+![Placeholder image. Replace by editing `[img-placeholder]` once.][img-placeholder]{fig-alt="Placeholder image" width=92%}
+
+## Two Images
+
+:::: columns
+::: {.column width="50%"}
+![Left placeholder image][img-placeholder]{fig-alt="Left image" width=65%}
+:::
+
+::: {.column width="50%"}
+![Right placeholder image][img-placeholder]{fig-alt="Right image" width=65%}
+:::
+::::
+
+## Itemize Plus Image
+
+:::: columns
+::: {.column width="56%"}
+### Design Notes
+
+- Left column for reasoning.
+- Right column for visual evidence.
+- Good for methods, workflows, and architecture.
+
+$$
+\mathbf{y}=\mathbf{A}\mathbf{x}+\mathbf{b}
+$$
+:::
+
+::: {.column width="44%"}
+![Supporting figure, placement towards top of slide][img-placeholder]{fig-alt="Supporting image" width=85% style="margin-top:-15%;"}
+:::
+::::
+
+## Itemize Left, Large Image Right
+
+:::: columns
+::: {.column width="38%"}
+### Insights
+
+- Short bullets only.
+- Keep visual dominant.
+- Large image stays above footer region.
+:::
+
+::: {.column width="62%"}
+![Large right-side image][img-placeholder]{fig-alt="Large right image" width=100%}
+:::
+::::
+
+## Large Image Left, Itemize Right
+
+:::: columns
+::: {.column width="62%"}
+![Large left-side image][img-placeholder]{fig-alt="Large left image" width=50%}
+:::
+
+::: {.column width="38%"}
+### Commentary
+
+- Mirror layout of previous slide.
+- Useful for comparison pairs.
+- Keep text density low.
+:::
+::::
+
+## Equation Focus
+
+Use this pattern for derivations or compact model summaries.
+
+$$
+\begin{aligned}
+\nabla \cdot (\rho \mathbf{u}) &= 0 \\
+\rho\left(\frac{\partial \mathbf{u}}{\partial t} + \mathbf{u}\cdot\nabla\mathbf{u}\right) &= -\nabla p + \mu\nabla^2\mathbf{u}
+\end{aligned}
+$$
+
+## Highlight Box Pattern
+
+<div style="background:#fff3bf;border-left:8px solid #c81818;padding:0.7rem 1rem;border-radius:8px;">
+<strong>Highlight:</strong> This is a reusable callout style for decisions, warnings, and main conclusions.
+</div>
+
+- Add one callout per slide maximum.
+- Use it to direct audience attention.
+
+## Closing / Next Steps
+
+1. Start from any slide pattern in this file.
+2. Replace `[img-placeholder]` with your own image path once.
+3. Duplicate and adapt layouts to build your final deck quickly.
+
+[img-placeholder]: assets/rightpic.jpg

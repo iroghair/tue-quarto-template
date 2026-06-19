@@ -1,0 +1,15 @@
+# Quarto build outputs
+_output/
+.quarto/
+
+# Editor settings
+.vscode/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+/.quarto/
+**/*.quarto_ipynb
+
+/.luarc.json
