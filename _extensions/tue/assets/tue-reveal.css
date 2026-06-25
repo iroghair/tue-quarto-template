@@ -63,6 +63,39 @@
   margin-bottom: 0.55em;
 }
 
+/* Quarto default callouts: keep heading text in each callout's accent color. */
+.reveal .callout.callout-style-default.callout-note {
+  --tue-callout-accent: var(--tue-blue);
+}
+
+.reveal .callout.callout-style-default.callout-tip {
+  --tue-callout-accent: var(--tue-green);
+}
+
+.reveal .callout.callout-style-default.callout-important {
+  --tue-callout-accent: var(--tue-cyan);
+}
+
+.reveal .callout.callout-style-default.callout-warning {
+  --tue-callout-accent: var(--tue-orange);
+}
+
+.reveal .callout.callout-style-default.callout-caution {
+  --tue-callout-accent: var(--tue-warm-red);
+}
+
+.reveal .callout.callout-style-default[class*="callout-"] .callout-header,
+.reveal .callout.callout-style-default[class*="callout-"] .callout-title,
+.reveal .callout.callout-style-default[class*="callout-"] .callout-title p,
+.reveal .callout.callout-style-default[class*="callout-"] .callout-body h1,
+.reveal .callout.callout-style-default[class*="callout-"] .callout-body h2,
+.reveal .callout.callout-style-default[class*="callout-"] .callout-body h3,
+.reveal .callout.callout-style-default[class*="callout-"] .callout-body h4,
+.reveal .callout.callout-style-default[class*="callout-"] .callout-body h5,
+.reveal .callout.callout-style-default[class*="callout-"] .callout-body h6 {
+  color: var(--tue-callout-accent) !important;
+}
+
 .reveal p,
 .reveal li {
   line-height: 1.35;
