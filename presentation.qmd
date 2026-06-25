@@ -239,4 +239,15 @@ Step 2 — wider
 Step 3 — round
 :::
 
-[img-placeholder]: assets/rightpic.jpg
+
+## Callout boxes
+
+You can still use the default quarto callouts (tip, warning, caution, note, etc)
+
+::: {.callout-warning} 
+
+### Practice makes perfect
+
+Keep on practicing!
+
+:::
