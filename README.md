@@ -6,7 +6,8 @@ This project provides a local Quarto presentation setup with both:
 
 ## Files
 
-- `presentation.qmd`: starter widescreen Reveal.js deck with an automatically generated TU/e-style cover slide and a few sample content slides.
+- `template.qmd`: minimal starter Reveal.js deck — edit this for new presentations.
+- `presentation.qmd`: full showcase of all available slide layouts (requires Python/Jupyter for code slides; see below).
 - `presentation-beamer.qmd`: starter TU/e Beamer PDF deck using the extension format `tue-beamer`.
 - `_quarto.yml`: Quarto project settings.
 - `_extensions/tue/`: local project support files, including the original TU/e Beamer assets plus the Reveal cover-slide filter and CSS.
@@ -14,12 +15,36 @@ This project provides a local Quarto presentation setup with both:
 - `_extensions/tue/assets/tue-reveal.css`: TU/e Reveal styling, including the semi-transparent scarlet cover band.
 - `assets/tue-cover-background.jpg`: title-slide background extracted from the TU/e corporate PowerPoint.
 
+## Installation
+
+There are two ways to use this theme, depending on your workflow.
+
+### Option 1 — New project from scratch (`quarto use template`)
+
+Creates a new folder with the extension, starter assets, and a minimal `template.qmd` ready to edit:
+
+```bash
+quarto use template iroghair/tue-quarto-template
+```
+
+Quarto will ask for a directory name. The resulting folder is a self-contained project — open `template.qmd` and start editing.
+
+### Option 2 — Add to an existing project (`quarto add`)
+
+Installs only the `_extensions/tue/` format into your current project:
+
+```bash
+quarto add iroghair/tue-quarto-template
+```
+
+Then set `format: tue-revealjs` (or `tue-beamer`) in your `.qmd` front matter and provide your own cover image and logo assets.
+
 ## Usage
 
 Render the Reveal deck with:
 
 ```bash
-quarto render presentation.qmd
+quarto render template.qmd
 ```
 
 Render the Beamer PDF deck with:
@@ -28,7 +53,23 @@ Render the Beamer PDF deck with:
 quarto render presentation-beamer.qmd
 ```
 
-The Reveal cover slide is generated from document metadata. Update `title`, `subtitle`, `author`, `date`, `tue-cover-image`, and `tue-cover-logo` in `presentation.qmd` to customize it.
+The Reveal cover slide is generated from document metadata. Update `title`, `subtitle`, `author`, `date`, `tue-cover-image`, and `tue-cover-logo` in your `.qmd` file to customize it.
+
+### Running the demonstration file with Python code
+
+`presentation.qmd` contains executable Python code blocks (plots, computations) that require a Jupyter kernel. The project ships a `pyproject.toml` and `uv.lock` to reproduce the exact environment.
+
+[Install uv](https://docs.astral.sh/uv/getting-started/installation/) if you don't have it, then install the environment once:
+
+```bash
+uv sync
+```
+
+Then render through uv so that Quarto picks up the managed Python environment:
+
+```bash
+uv run quarto render presentation.qmd
+```
 
 The widescreen Reveal.js defaults live in `_quarto.yml`, so new `.qmd` decks in this folder will inherit the same layout and styling.
 

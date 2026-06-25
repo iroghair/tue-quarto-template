@@ -1,0 +1,46 @@
+---
+title: "Presentation Title"
+subtitle: "Subtitle"
+author: "Author Name"
+date: today
+format: tue-revealjs
+tue-cover-image: assets/tue-bg-img1.jpg
+tue-cover-logo: assets/tue-logo-white.png
+# Red bar opacity (0 = fully transparent, 1 = fully opaque)
+tue-cover-bar-opacity: 0.65
+# Slide background colour — used for normal slides and the bottom footer strip of the cover slide
+tue-slide-bg: "#f3efef"
+# Content slide text padding (top/bottom left/right), e.g. "30px 58px"
+tue-content-slide-padding: "30px 58px"
+# Short title shown on the left of the footer bar on every content slide
+tue-short-title: "Short Title — TU/e"
+# Logo shown on the right of the footer bar (defaults to TU/e scarlet logo)
+tue-footer-logo: "assets/tue-logo-wide-scarlet-alpha.png"
+---
+
+## Introduction
+
+- Replace this slide with your own content.
+- See `presentation.qmd` for a full showcase of available slide layouts.
+
+## Two Columns
+
+:::: columns
+::: {.column width="50%"}
+### Left
+
+- Point one
+- Point two
+:::
+::: {.column width="50%"}
+### Right
+
+- Point A
+- Point B
+:::
+::::
+
+## Conclusion
+
+- Key takeaway one
+- Key takeaway two
